@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Atualizar livro</h2>
+<form [formGroup]="updatedBook" class="book-form">
+    <mat-dialog-content>
+        <mat-form-field class="text-field">
+            <mat-label>Título</mat-label>
+            <input [formControl]="titleLabel" matInput>
+        </mat-form-field>
+        <div>
+            <mat-form-field class="text-field">
+                <mat-label>Autor</mat-label>
+                <input [formControl]="authorLabel" matInput>
+            </mat-form-field>
+        </div>
+        <mat-form-field class="number-field">
+            <mat-label>Quantidade</mat-label>
+            <input type="number" min="0" [formControl]="amountLabel" matInput>
+        </mat-form-field>
+        <label class="format">Formato: </label>
+        <mat-radio-group [formControl]="formatLabelControl">
+            <mat-radio-button value="A">Audiolivro</mat-radio-button>
+            <mat-radio-button value="E">E-book</mat-radio-button>
+            <mat-radio-button value="F">Livro Físico</mat-radio-button>
+        </mat-radio-group>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-stroked-button (click)="onEdit()" color="accent">Atualizar</button>
+        <button mat-stroked-button (click)="onNoClick()">Cancelar</button>
+    </mat-dialog-actions>
+</form>

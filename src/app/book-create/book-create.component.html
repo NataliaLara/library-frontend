@@ -1,0 +1,29 @@
+<h3>Livro</h3>
+<form [formGroup]="options" class="book-form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="title">
+    <mat-label>Título</mat-label>
+    <input [formControl]="titleLabel" matInput>
+  </mat-form-field>
+  <mat-form-field class="author">
+    <mat-label>Autor</mat-label>
+    <input [formControl]="authorLabel" matInput>
+  </mat-form-field>
+  <div>
+    <mat-form-field class="number">
+      <mat-label>Quantidade</mat-label>
+      <input type="number" min="0" [formControl]="amountLabel" matInput>
+    </mat-form-field>
+    <label class="format">Formato: </label>
+    <mat-radio-group [formControl]="formatLabelControl">
+      <mat-radio-button value="A">Audiolivro</mat-radio-button>
+      <mat-radio-button value="E">E-book</mat-radio-button>
+      <mat-radio-button value="F">Livro Físico</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div>
+    <button type="submit" mat-stroked-button color="accent">Adicionar</button>
+  </div>
+
+</form>
+<p-messages></p-messages>

@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>{{book.title}}</mat-card-title>
+  <mat-card-content>Escrito por: {{book.author}}</mat-card-content>
+  <mat-card-content>Formato: {{transformFormat(book.format)}}</mat-card-content>
+  <mat-card-content>Quantidade: {{book.amount}}</mat-card-content>
+  <mat-card-actions align="end">
+    <button (click)="updateBook(book)" mat-stroked-button color="accent">Atualizar</button>
+    <button (click)="removeBook(book)" mat-raised-button color="warn">Deletar</button>
+  </mat-card-actions>
+</mat-card>

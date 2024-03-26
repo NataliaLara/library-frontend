@@ -1,0 +1,18 @@
+.main{
+    padding: 20px;
+}
+i{
+    color: #ff4081;
+}
+mat-icon{
+    color: #ff4081;
+    padding-top: 5px;
+}
+mat-card{
+    text-indent: 10;
+    border-bottom: 10%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #f9fafb;
+}

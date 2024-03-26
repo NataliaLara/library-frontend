@@ -1,0 +1,19 @@
+<div class="main">
+    <mat-card>
+      
+      <mat-card-title>
+        <i class="pi pi-book" ></i>
+        Biblioteca</mat-card-title>
+    </mat-card>
+    <p-accordion [multiple]="true" [activeIndex]="[0,1]">
+      <p-accordionTab header="Adicionar livro">
+      <app-book-create (newBookEmitter)="updateBookList($event)"></app-book-create>
+    </p-accordionTab>
+    <p-accordionTab header="Acervo">
+      <app-book-view *ngFor="let book of books"
+    (removeBookEvent)="removeBook($event)"
+    (updateBookEvent)="updateBook($event)"
+    [book]="book"></app-book-view>
+    </p-accordionTab>
+  </p-accordion>
+</div>

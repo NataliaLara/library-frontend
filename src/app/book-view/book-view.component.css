@@ -1,0 +1,6 @@
+mat-card{
+    width: 20%;
+    display: table-row;
+    padding-left: 10%;
+    max-width: 300px;
+}
